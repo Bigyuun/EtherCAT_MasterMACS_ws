@@ -64,7 +64,7 @@
 #define C_AXIS1_MAX_RPM			2000					// Maximum velocity in RPM
 #define C_AXIS1_VELRES			100						// Velocity resolution, Scaling used for the velocity and acceleration/deceleration commands, default
 #define C_AXIS1_RAMPTYPE		0	// Defines the ramptype
-#define C_AXIS1_RAMPMIN			800						// Maximum acceleration
+#define C_AXIS1_RAMPMIN			2000						// Maximum acceleration
 #define C_AXIS1_JERKMIN			1000					// Minimum time (ms) required before reaching the maximum acceleration
 #define C_AXIS1_TRACKERR		2000000					// There is also a following error on EPOS4, could be very high ond the MACS
 
@@ -82,7 +82,7 @@
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 // Encoder settings & axis user units (MACS)
-#define C_AXIS2_ENCRES 			42						// Resolution of the encoder for position feed back in increments (quadcounts)
+#define C_AXIS2_ENCRES 			4*1024						// Resolution of the encoder for position feed back in increments (quadcounts)
 #define	C_AXIS2_POSENCREV		1							// Number of revolutions of the motor
 #define	C_AXIS2_POSENCQC		C_AXIS2_ENCRES				// Number of quadcounts in POSENCREV revolutions
 #define	C_AXIS2_POSFACT_Z		1							// Number of revolutions of the input shaft
@@ -93,16 +93,16 @@
 // Axis Movement Parameter
 #define C_AXIS2_MAX_RPM			2000					// Maximum velocity in RPM
 #define C_AXIS2_VELRES			100						// Velocity resolution, Scaling used for the velocity and acceleration/deceleration commands, default
-#define C_AXIS2_RAMPTYPE			0	// Defines the ramptype
+#define C_AXIS2_RAMPTYPE		0	// Defines the ramptype
 #define C_AXIS2_RAMPMIN			2000						// Maximum acceleration
 #define C_AXIS2_JERKMIN			1000					// Minimum time (ms) required before reaching the maximum acceleration
-#define C_AXIS2_TRACKERR			200000000					// There is also a following error on EPOS4, could be very high ond the MACS
+#define C_AXIS2_TRACKERR		200000000					// There is also a following error on EPOS4, could be very high ond the MACS
 
 // Axis MACS control loop settings
 // MACS position control is not used
 #define	C_AXIS2_KPROP			0
-#define	C_AXIS2_KINT				0
-#define	C_AXIS2_KDER				0
+#define	C_AXIS2_KINT			0
+#define	C_AXIS2_KDER			0
 #define	C_AXIS2_KILIM			0
 #define	C_AXIS2_KILIMTIME		0
 #define	C_AXIS2_BANDWIDTH		1000
@@ -114,27 +114,27 @@
 ////////////////////////////////////////////////////////////
 
 // Encoder settings & axis user units (MACS)
-#define C_AXIS3_ENCRES 			42						// Resolution of the encoder for position feed back in increments (quadcounts)
+#define C_AXIS3_ENCRES 			4*1024						// Resolution of the encoder for position feed back in increments (quadcounts)
 #define	C_AXIS3_POSENCREV		1							// Number of revolutions of the motor
-#define	C_AXIS3_POSENCQC			C_AXIS3_ENCRES				// Number of quadcounts in POSENCREV revolutions
+#define	C_AXIS3_POSENCQC		C_AXIS3_ENCRES				// Number of quadcounts in POSENCREV revolutions
 #define	C_AXIS3_POSFACT_Z		1							// Number of revolutions of the input shaft
 #define	C_AXIS3_POSFACT_N		1							// Number of revolutions of the output shaft in POSFACT_Z revolutions of the input shaft
 #define	C_AXIS3_FEEDREV			1							// Number of revolutions of the gear box output shaft
-#define	C_AXIS3_FEEDDIST			C_AXIS3_ENCRES				// Distance travelled (in user units) in FEEDREV revolutions of the gear box output shaft [mm]
+#define	C_AXIS3_FEEDDIST		C_AXIS3_ENCRES				// Distance travelled (in user units) in FEEDREV revolutions of the gear box output shaft [mm]
 
 // Axis Movement Parameter
 #define C_AXIS3_MAX_RPM			2000					// Maximum velocity in RPM
 #define C_AXIS3_VELRES			100						// Velocity resolution, Scaling used for the velocity and acceleration/deceleration commands, default
-#define C_AXIS3_RAMPTYPE			0	// Defines the ramptype
+#define C_AXIS3_RAMPTYPE		0	// Defines the ramptype
 #define C_AXIS3_RAMPMIN			2000						// Maximum acceleration
 #define C_AXIS3_JERKMIN			1000					// Minimum time (ms) required before reaching the maximum acceleration
-#define C_AXIS3_TRACKERR			200000000				// There is also a following error on EPOS4, could be very high ond the MACS
+#define C_AXIS3_TRACKERR		200000000				// There is also a following error on EPOS4, could be very high ond the MACS
 
 // Axis MACS control loop settings
 // MACS position control is not used
 #define	C_AXIS3_KPROP			0
-#define	C_AXIS3_KINT				0
-#define	C_AXIS3_KDER				0
+#define	C_AXIS3_KINT			0
+#define	C_AXIS3_KDER			0
 #define	C_AXIS3_KILIM			0
 #define	C_AXIS3_KILIMTIME		0
 #define	C_AXIS3_BANDWIDTH		1000
@@ -146,27 +146,27 @@
 ////////////////////////////////////////////////////////////
 
 // Encoder settings & axis user units (MACS)
-#define C_AXIS4_ENCRES 			42						// Resolution of the encoder for position feed back in increments (quadcounts)
+#define C_AXIS4_ENCRES 			4*1024						// Resolution of the encoder for position feed back in increments (quadcounts)
 #define	C_AXIS4_POSENCREV		1							// Number of revolutions of the motor
-#define	C_AXIS4_POSENCQC			C_AXIS4_ENCRES				// Number of quadcounts in POSENCREV revolutions
+#define	C_AXIS4_POSENCQC		C_AXIS4_ENCRES				// Number of quadcounts in POSENCREV revolutions
 #define	C_AXIS4_POSFACT_Z		1							// Number of revolutions of the input shaft
 #define	C_AXIS4_POSFACT_N		1							// Number of revolutions of the output shaft in POSFACT_Z revolutions of the input shaft
 #define	C_AXIS4_FEEDREV			1							// Number of revolutions of the gear box output shaft
-#define	C_AXIS4_FEEDDIST			C_AXIS4_ENCRES				// Distance travelled (in user units) in FEEDREV revolutions of the gear box output shaft [mm]
+#define	C_AXIS4_FEEDDIST		C_AXIS4_ENCRES				// Distance travelled (in user units) in FEEDREV revolutions of the gear box output shaft [mm]
 
 // Axis Movement Parameter
 #define C_AXIS4_MAX_RPM			2000					// Maximum velocity in RPM
 #define C_AXIS4_VELRES			100						// Velocity resolution, Scaling used for the velocity and acceleration/deceleration commands, default
-#define C_AXIS4_RAMPTYPE			0	// Defines the ramptype
+#define C_AXIS4_RAMPTYPE		0	// Defines the ramptype
 #define C_AXIS4_RAMPMIN			2000						// Maximum acceleration
 #define C_AXIS4_JERKMIN			1000					// Minimum time (ms) required before reaching the maximum acceleration
-#define C_AXIS4_TRACKERR			200000000					// There is also a following error on EPOS4, could be very high ond the MACS
+#define C_AXIS4_TRACKERR		200000000					// There is also a following error on EPOS4, could be very high ond the MACS
 
 // Axis MACS control loop settings
 // MACS position control is not used
 #define	C_AXIS4_KPROP			0
-#define	C_AXIS4_KINT				0
-#define	C_AXIS4_KDER				0
+#define	C_AXIS4_KINT			0
+#define	C_AXIS4_KDER			0
 #define	C_AXIS4_KILIM			0
 #define	C_AXIS4_KILIMTIME		0
 #define	C_AXIS4_BANDWIDTH		1000
@@ -180,25 +180,25 @@
 // Encoder settings & axis user units (MACS)
 #define C_AXIS5_ENCRES 			4*1024						// Resolution of the encoder for position feed back in increments (quadcounts)
 #define	C_AXIS5_POSENCREV		1							// Number of revolutions of the motor
-#define	C_AXIS5_POSENCQC			C_AXIS5_ENCRES				// Number of quadcounts in POSENCREV revolutions
+#define	C_AXIS5_POSENCQC		C_AXIS5_ENCRES				// Number of quadcounts in POSENCREV revolutions
 #define	C_AXIS5_POSFACT_Z		1							// Number of revolutions of the input shaft
 #define	C_AXIS5_POSFACT_N		1							// Number of revolutions of the output shaft in POSFACT_Z revolutions of the input shaft
 #define	C_AXIS5_FEEDREV			1							// Number of revolutions of the gear box output shaft
-#define	C_AXIS5_FEEDDIST			C_AXIS5_ENCRES				// Distance travelled (in user units) in FEEDREV revolutions of the gear box output shaft [mm]
+#define	C_AXIS5_FEEDDIST		C_AXIS5_ENCRES				// Distance travelled (in user units) in FEEDREV revolutions of the gear box output shaft [mm]
 
 // Axis Movement Parameter
 #define C_AXIS5_MAX_RPM			2000					// Maximum velocity in RPM
 #define C_AXIS5_VELRES			100						// Velocity resolution, Scaling used for the velocity and acceleration/deceleration commands, default
-#define C_AXIS5_RAMPTYPE			0	// Defines the ramptype
+#define C_AXIS5_RAMPTYPE		0	// Defines the ramptype
 #define C_AXIS5_RAMPMIN			2000						// Maximum acceleration
 #define C_AXIS5_JERKMIN			1000					// Minimum time (ms) required before reaching the maximum acceleration
-#define C_AXIS5_TRACKERR			200000000					// There is also a following error on EPOS4, could be very high ond the MACS
+#define C_AXIS5_TRACKERR		200000000					// There is also a following error on EPOS4, could be very high ond the MACS
 
 // Axis MACS control loop settings
 // MACS position control is not used
 #define	C_AXIS5_KPROP			0
-#define	C_AXIS5_KINT				0
-#define	C_AXIS5_KDER				0
+#define	C_AXIS5_KINT			0
+#define	C_AXIS5_KDER			0
 #define	C_AXIS5_KILIM			0
 #define	C_AXIS5_KILIMTIME		0
 #define	C_AXIS5_BANDWIDTH		1000
@@ -213,19 +213,19 @@
 // Encoder settings & axis user units (MACS)
 #define C_AXIS6_ENCRES 			4*1024							// Resolution of the encoder for position feed back in increments (quadcounts)
 #define	C_AXIS6_POSENCREV		1							// Number of revolutions of the motor
-#define	C_AXIS6_POSENCQC			C_AXIS6_ENCRES				// Number of quadcounts in POSENCREV revolutions
+#define	C_AXIS6_POSENCQC		C_AXIS6_ENCRES				// Number of quadcounts in POSENCREV revolutions
 #define	C_AXIS6_POSFACT_Z		1							// Number of revolutions of the input shaft
 #define	C_AXIS6_POSFACT_N		1							// Number of revolutions of the output shaft in POSFACT_Z revolutions of the input shaft
 #define	C_AXIS6_FEEDREV			1							// Number of revolutions of the gear box output shaft
-#define	C_AXIS6_FEEDDIST			C_AXIS6_ENCRES				// Distance travelled (in user units) in FEEDREV revolutions of the gear box output shaft [mm]
+#define	C_AXIS6_FEEDDIST		C_AXIS6_ENCRES				// Distance travelled (in user units) in FEEDREV revolutions of the gear box output shaft [mm]
 
 // Axis Movement Parameter
 #define C_AXIS6_MAX_RPM			2000					// Maximum velocity in RPM
 #define C_AXIS6_VELRES			100						// Velocity resolution, Scaling used for the velocity and acceleration/deceleration commands, default
-#define C_AXIS6_RAMPTYPE			0	// Defines the ramptype
+#define C_AXIS6_RAMPTYPE		0	// Defines the ramptype
 #define C_AXIS6_RAMPMIN			2000						// Maximum acceleration
 #define C_AXIS6_JERKMIN			1000					// Minimum time (ms) required before reaching the maximum acceleration
-#define C_AXIS6_TRACKERR			200000000					// There is also a following error on EPOS4, could be very high ond the MACS
+#define C_AXIS6_TRACKERR		200000000					// There is also a following error on EPOS4, could be very high ond the MACS
 
 // Axis MACS control loop settings
 // MACS position control is not used

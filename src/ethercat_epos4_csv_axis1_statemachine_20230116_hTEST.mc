@@ -97,26 +97,35 @@ SmState EtherCAT_Handler
 
 	SmState Standing
     {
-                SIG_ENTRY  = {
+				SIG_ENTRY  = 	{
                                 SmPeriod(1, id, TICK_EtherCAT_MasterCommand);
                                 print("into the Standing State ");
                                 print("Default User Parameter(USER_PARAM) = ", USER_PARAM(5));
                                 USER_PARAM(5) = 7;
-                            }
-//					   SIG_START = {
-//					   				print("START...!");
-//					   				//USER_PARAM(5) = 7;
-//					   				//Delay(1000);
-//					   				//USER_PARAM(5) = 1;
-//					   				//Delay(1000);
-//					   				}
+								}
+
+				SIG_START = 	{
+								data[0]++;
+								if(data[0]%5000==0) print("data[0] = ", data[0]);
+								if(data[0] == 200000) data[0]=0;
+								print("data[0] = ", data[0]);
+								Delay(1);
+								}
+
+				SIG_IDLE = 		{
+								data[1]++;
+								if(data[1]%5000==0) print("data[1] = ", data[1]);
+								if(data[1] == 100000) data[1]=0;
+								print("data[1] = ", data[1]);
+								Delay(1);
+
+								}
 
                 // DY - If TCP state machine receive the message, this timer will be update the value
-                TICK_EtherCAT_MasterCommand = {
-
+                TICK_EtherCAT_MasterCommand =
+                			{
                           	Cvel(C_AXIS1, pos[0]);	// set velocity (CSV)
   							USER_PARAM(5) = 1;		// start moving
-
                             }
 
 
@@ -172,10 +181,6 @@ SmState TCPIP_Handler{
 	SIG_INIT = {
 		print("TCP/IP Handler Initializing");
 		print("data(tcp) = ", data[0]);
-
-		SmPeriod(1, id, TICK_Configure_SineWave);
-		SmPeriod(1, id, TICK_TCP_Receive);
-		SmPeriod(1, id, TICK_TCP_Send);
 
 		return(0);
 	}
@@ -259,6 +264,9 @@ long init_sm_EtherCAT(long id, long data[])
 long init_sm_tcp(long id, long data[])
 {
 	data[0]=1;
+	SmPeriod(1, id, TICK_Configure_SineWave);
+	SmPeriod(1, id, TICK_TCP_Receive);
+	SmPeriod(1, id, TICK_TCP_Send);
 
 	return(0);
 }

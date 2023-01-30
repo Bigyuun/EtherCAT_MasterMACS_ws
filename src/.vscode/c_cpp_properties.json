@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/include/**",
+                "C:/Windows/System32/**",
+                "C:/Windows/WinSxS/wow64_microsoft-windows-w..nfrastructure-ws232_31bf3856ad364e35_10.0.22000.1_none_534ff8bb077fdb2f/**",
+                "C:/Windows/WinSxS/wow64_microsoft-windows-winsock-legacy_31bf3856ad364e35_10.0.22000.1_none_43fd7ea14ab0943b/wsock32.dll"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "browse": {
+                "path": [
+                    // "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                    // "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+                    "C:/msys64/mingw64/include/**",
+                    "C:/msys64/mingw64/include/c++/12.2.0/bits",
+                    "${workspaceRoot}",
+                    "C:/Windows/System32/**",
+                    "C:/Windows/WinSxS/wow64_microsoft-windows-w..nfrastructure-ws232_31bf3856ad364e35_10.0.22000.1_none_534ff8bb077fdb2f/**",
+                    "C:/Windows/WinSxS/wow64_microsoft-windows-w..nfrastructure-ws232_31bf3856ad364e35_10.0.22000.1_none_534ff8bb077fdb2f",
+                    "C:/Windows/WinSxS/wow64_microsoft-windows-winsock-legacy_31bf3856ad364e35_10.0.22000.1_none_43fd7ea14ab0943b/wsock32.dll",
+                    "C:/Windows/WinSxS/wow64_microsoft-windows-winsock-legacy_31bf3856ad364e35_10.0.22000.1_none_43fd7ea14ab0943b"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
